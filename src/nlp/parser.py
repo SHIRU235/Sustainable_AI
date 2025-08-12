@@ -4,6 +4,7 @@ import re
 import nltk
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 def clean_prompt(prompt: str) -> str:
     """
