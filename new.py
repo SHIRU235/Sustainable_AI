@@ -15,7 +15,7 @@
 
 # # Create base files
 # files = [
-#     "run.sh",
+#     "README.md", "requirements.txt", "run.sh", ".gitignore",
 #     "src/gui/app.py", "src/gui/layout.py",
 #     "src/nlp/parser.py", "src/nlp/complexity_score.py", "src/nlp/simplifier.py",
 #     "src/prediction/estimator.py", "src/optimization/recommender.py", "src/anomaly/detector.py",
@@ -28,17 +28,21 @@
 
 
 import pandas as pd
+import os
 
-# Define mock data
+# Define mock data with all required columns
 data = pd.DataFrame({
     'num_layers': [2, 4, 6, 8, 10],
     'training_hours': [1, 2, 3, 4, 5],
     'flops_per_hour': [10, 20, 40, 60, 90],
-    'energy_consumption': [0.5, 1.3, 2.8, 4.5, 6.9]  # Renamed to match your model's expected column
+    'token_count': [50, 100, 150, 200, 250],
+    'readability_score': [60.5, 62.3, 64.0, 65.7, 67.2],
+    'energy_consumption': [0.5, 1.3, 2.8, 4.5, 6.9]
 })
 
-# Save to CSV
-csv_path = r"E:\SustainableAI_FinalProject\data\synthetic\energy_data.csv"
-data.to_csv(csv_path, index=False)
+# Path to save CSV
+csv_path = r"E:\SustainableAiProject\data\synthetic\energy_data.csv"
+os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
-print(f"✅ Synthetic data saved to: {csv_path}")
+# Save CSV
+data.to_csv(csv_path, index=False)   
