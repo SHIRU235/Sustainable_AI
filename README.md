@@ -127,7 +127,7 @@ Git
 Setup Steps
 
 # Clone repository
-git clone https://github.com/yourusername/SustainableAI_Project.git
+git clone https://github.com/SHIRU235/Sustainable_AI.git
 cd SustainableAI_Project
 
 # Install dependencies
@@ -155,5 +155,6 @@ scikit-learn (Random Forest, Linear Regression, Isolation Forest)
 Data Storage & Utilities:
 
 SQLite
+
 
 pandas, numpy, matplotlib
